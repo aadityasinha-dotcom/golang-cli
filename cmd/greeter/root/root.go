@@ -1,9 +1,10 @@
 package root
 
 import (
-  "fmt"
-  "github.com/spf13/cobra"
-  "adi/cmd/greeter/greet"
+	"adi/cmd/greeter/apis"
+	"adi/cmd/greeter/greet"
+	"fmt"
+	"github.com/spf13/cobra"
 )
 
 func RootCommand() *cobra.Command {
@@ -17,6 +18,7 @@ func RootCommand() *cobra.Command {
   }
 
   cmd.AddCommand(greet.GreetCommand())
+  cmd.AddCommand(api.WeatherCommand())
 
   return cmd
 }
