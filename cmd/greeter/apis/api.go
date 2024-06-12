@@ -10,22 +10,9 @@ import (
 
 func WeatherCommand() *cobra.Command {
 
-  data := map[string]interface{}{
-    "parent": map[string]interface{}{
-      "database_id": "YOUR_DATABASE_ID",
-    },
-    "properties": map[string]interface{}{
-      "Name": map[string]string{
-        "title": "Task Name",
-      },
-    },
-  }
+    url := fmt.Sprintf("https://api.notion.com/v1/databases/%s/query", "49b4ed5716ed4c089ad5c7baa32f5158")
 
-    // Convert data to JSON
-    jsonData, err := json.Marshal(data)
-    if err != nil {
-        panic(err)
-    }
+    jsonData := map[string]interface{}{}
 
   client := &http.Client{}
   req, err := http.NewRequest("POST", "https://api.notion.com/v1/pages", bytes.NewBuffer(jsonData))
