@@ -19,11 +19,9 @@ func WeatherCommand() *cobra.Command {
         panic(err)
     }
 
-    // Include authentication token
     req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
     req.Header.Set("Content-Type", "application/json")
 
-    // Send request
     resp, err := client.Do(req)
     if err != nil {
         panic(err)
@@ -33,7 +31,7 @@ func WeatherCommand() *cobra.Command {
   return &cobra.Command{
     Use: "api",
     Short: "API the user",
-    Long: "Greet the user with a friendly message",
+    Long: "Start the API server",
     Run: func(cmd *cobra.Command, args []string) {
       fmt.Printf("Running the API, %s!\n", args[0])
     },
