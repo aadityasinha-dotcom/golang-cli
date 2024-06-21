@@ -29,7 +29,7 @@ func WeatherCommand() *cobra.Command {
     defer resp.Body.Close()
 
   return &cobra.Command{
-    Use: "api",
+    Use: "Api",
     Short: "API the user",
     Long: "Start the API server",
     Run: func(cmd *cobra.Command, args []string) {
