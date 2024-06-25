@@ -1,5 +1,7 @@
 package main
 
+// main function will add all the commands
+
 import (
 	"adi/cmd/greeter/root"
 	"fmt"
