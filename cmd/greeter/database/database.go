@@ -56,10 +56,10 @@ func queryDatabase(apiKey string) {
 	}
 
 	// Check if the response status is not OK
-	if resp.StatusCode != http.StatusOK {
-		fmt.Printf("Error: %s\n", body)
-		return
-	}
+	// if resp.StatusCode != http.StatusOK {
+	// 	fmt.Printf("Error: %s\n", body)
+	// 	return
+	// }
 
 	// Print the response body
 	fmt.Println("Response:", string(body))
