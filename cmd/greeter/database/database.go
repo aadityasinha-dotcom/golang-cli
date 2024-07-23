@@ -18,7 +18,7 @@ func queryDatabase(apiKey string) {
 	url := fmt.Sprintf("https://api.notion.com/v1/databases/%s/query", databaseID)
 
 	// Create an empty JSON object for the POST request body
-	jsonData := map[string]interface{}{}
+	// jsonData := map[string]interface{}{}
 
 	// Convert the map to JSON
 	jsonValue, err := json.Marshal(jsonData)
