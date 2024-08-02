@@ -19,8 +19,8 @@ func WeatherCommand() *cobra.Command {
         panic(err)
     }
 
-    req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
-    req.Header.Set("Content-Type", "application/json")
+    // req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
+    // req.Header.Set("Content-Type", "application/json")
 
     resp, err := client.Do(req)
     if err != nil {
