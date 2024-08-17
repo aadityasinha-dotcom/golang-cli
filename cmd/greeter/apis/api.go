@@ -11,7 +11,7 @@ func WeatherCommand() *cobra.Command {
 
     url := fmt.Sprintf("https://api.notion.com/v1/databases/%s/query", "49b4ed5716ed4c089ad5c7baa32f5158")
 
-    jsonData := map[string]interface{}{}
+    // jsonData := map[string]interface{}{}
 
     client := &http.Client{}
     req, err := http.NewRequest("POST", "https://api.notion.com/v1/pages", bytes.NewBuffer(jsonData))
