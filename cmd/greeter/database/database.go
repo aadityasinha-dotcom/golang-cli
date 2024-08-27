@@ -14,8 +14,8 @@ const notionAPIVersion = "2022-06-28"
 func queryDatabase(apiKey string) {
 	// Create the request URL
   // https://www.notion.so/49b4ed5716ed4c089ad5c7baa32f5158?v=0ebb9632bd01425e8a5e2708f18016fe&pvs=4
- //  const databaseID = "49b4ed5716ed4c089ad5c7baa32f5158"
-	// url := fmt.Sprintf("https://api.notion.com/v1/databases/%s/query", databaseID)
+  const databaseID = "49b4ed5716ed4c089ad5c7baa32f5158"
+	url := fmt.Sprintf("https://api.notion.com/v1/databases/%s/query", databaseID)
 
 	// Create an empty JSON object for the POST request body
 	jsonData := map[string]interface{}{}
