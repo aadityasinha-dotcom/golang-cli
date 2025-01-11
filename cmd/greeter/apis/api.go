@@ -15,9 +15,9 @@ func WeatherCommand() *cobra.Command {
 
     client := &http.Client{}
     req, err := http.NewRequest("POST", "https://api.notion.com/v1/pages", bytes.NewBuffer(jsonData))
-    // if err != nil {
-    //     panic(err)
-    // }
+    if err != nil {
+        panic(err)
+    }
 
     req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
     req.Header.Set("Content-Type", "application/json")
