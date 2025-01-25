@@ -35,9 +35,9 @@ func queryDatabase(apiKey string) {
 	}
 
 	// Add the necessary headers
-	// req.Header.Set("Authorization", "Bearer "+apiKey)
-	// req.Header.Set("Content-Type", "application/json")
-	// req.Header.Set("Notion-Version", notionAPIVersion)
+	req.Header.Set("Authorization", "Bearer "+apiKey)
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Notion-Version", notionAPIVersion)
 
 	// // Send the request
 	client := &http.Client{}
